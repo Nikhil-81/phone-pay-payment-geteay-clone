@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      #spacer{
+        height: 420px;
+      }
+      #cont {
+        background-color: #ecf3f3;
+        width: 40%;
+        margin: auto;
+        height: 600px;
+        border: 1px solid black;
+      }
+      .pageOneNav {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        background-color: #ac78dd;
+        padding: 8px 0;
+      }
+      .pageOneSec1 {
+        display: flex;
+        align-items: center;
+      }
+      .pageOneSec1,
+      span,
+      b {
+        padding-left: 6px;
+      }
+
+      div.pageOneSec1 > *,
+      div.pageOneSec2 > * {
+        color: white;
+      }
+      #footer{
+        display: flex;
+        flex-direction: column;
+        background-color:white;
+        row-gap: 18px;
+        margin-top:10px
+      }
+      .Page1footSec2{
+        display: flex;
+        align-items: center;
+        padding-bottom: 10px;
+      }
+      .Page1footSec2>span:nth-child(3){
+        margin-left: 15px;
+      }
+      .Page1footSec2>input{
+        width: 660px;
+        height: 36px;
+        border: none
+      }
+      .Page1footSec2>p:nth-child(1){
+        margin-left: 20px;
+      }
+      .userbankBlock {
+    display: flex;
+    align-items: center;
+}
+.Page1footSec1 {
+    margin-left: 25px;
+    margin-top: 5px;
+}
+.Page1footSec2>p:nth-child(1) {
+    margin-left: 20px;
+    color: green;
+    font-size: 25px;
+    padding-right: 13px;
+}
+button#procidPayment {
+    padding: 5px 20px;
+    /* width: 272px; */
+    margin: 0 9px;
+    background: green;
+    color: white;
+    font-size: 15px;
+    border-radius: 15px;
+}
+.gif{
+    stroke: black;
+}
+
+
+
+#page_1{
+    position: relative;
+}
+
+
+
+#page_2 {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, 0%);
+    width: 13%;
+    background-color: white;
+    border-radius: 9px;
+    display: none;
+}
+div#page_2>*{
+    margin: auto;
+    display: block;
+    text-align: center;
+
+}
+.calBox{
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 33px;
+}
+div.calBox>*{
+    color: #18188d;
+}
+.page4Footer {
+    background: #ebebeb;
+}
+
+
+
+.page4Navesec1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: -3px;
+    background: white;
+    padding: 10px;
+}
+.page4Navesec2{
+    display: flex;
+    justify-content: space-between;
+    background: #1e55cf;
+    padding: 7px;
+}
+.page4Navesec2>p{
+    margin-left: 25px;
+}
+.UserAmoutSumm{
+    display: flex;
+    gap:15px
+}
+
+
+div.page4Navesec2>*{
+    color: white;
+}
+.iPPassworg>form>input{
+    border: none;
+    border-bottom: 1px solid black;
+    width: 8%;
+}
+.iPPassworg {
+   
+    text-align: center;
+    height: 370px;
+    background-color: white;
+}
+#page_4{
+    display:none
+}
+
+    </style>
+  </head>
+  <body>
+    <div id="cont">
+      <div id="page_1">
+        <div class="pageOneNav">
+          <div class="pageOneSec1">
+            <span class="material-symbols-outlined"> arrow_back </span>
+            <span class="material-symbols-outlined"> account_circle </span>
+            <b class="userData">
+              <p>Pooja</p>
+              <p>8766716975</p>
+            </b>
+          </div>
+          <div class="pageOneSec2">
+            <span class="material-symbols-outlined"> help </span>
+            <span class="material-symbols-outlined"> more_vert </span>
+          </div>
+        </div>
+        <div id="spacer"></div>
+        <div id="footer">
+          <div class="Page1footSec1">
+            <p class="Page1Mass">Transfer Money to</p>
+            <div class="userbankBlock">
+              <p class="page1BankingName">Banking Name:Pooja Shrevastav</p>
+              <span style="color: green;" class="material-symbols-outlined"> verified_user </span>
+            </div>
+          </div>
+          <div class="Page1footSec2">
+            <p>&#x20B9</p>
+            <input placeholder="Amount" class="SendAmmount" />
+            <span class="material-symbols-outlined">
+                feed
+                </span>
+                <p>|</p>
+                <span class="material-symbols-outlined">
+                    account_balance
+                    </span>
+                    <p>xx0448</p>
+                    <button id="procidPayment" onclick="prociedpayment()">PAY</button>
+          </div>
+        </div>
+      </div>
+      <div id="page_2" >
+    <img class="gif" style="width: 40%;" src="https://s.yimg.com/ny/api/res/1.2/KjP0AhwGbkRZS2McYmCkbQ--/YXBwaWQ9aGlnaGxhbmRlcjt3PTQyMDtoPTQyMA--/https://s.yimg.com/uu/api/res/1.2/CVaYlJEObCwZHQrCUXz4rw--~B/aD0yOTY7dz0yOTY7YXBwaWQ9eXRhY2h5b24-/http://media.zenfs.com/en-US/homerun/the_zoe_report_beauty_947/00f649c6b13a6a1bb6ad971428d79d0a">
+        <p style="color:gray">Initiating transition</p>
+        <b style="display: flex;">
+            <p style="font-size:10px;color:gray">Powered by <img class="upiImage" style="width: 20%;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/UPI-Logo-vector.svg/1200px-UPI-Logo-vector.svg.png" /></p>
+        </b>
+      </div>
+      <div id="page_4">
+        <div class="page4Nav">
+            <div class="page4Navesec1">
+                <p style="padding-left: 15px;">Bank Of Maharashtra</p>
+                <img class="upiImage" style="width: 10%;margin-left: 55%;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/UPI-Logo-vector.svg/1200px-UPI-Logo-vector.svg.png" /></p>
+
+            </div>
+            <div class="page4Navesec2">
+                <p>Pooja Shrivastave</p>
+                <div class="UserAmoutSumm">
+                    <p>&#x20B9</p>
+                    <p class="userInputAmout"></p>
+                    <span class="material-symbols-outlined">
+                        expand_more
+                        </span>
+                </div>
+            </div>
+
+        </div>
+        <div class="iPPassworg">
+            <p style="padding:20px">Enter UPI PIN</p>
+            <form id="pin">
+                <input/>
+                <input/>
+                <input/>
+                <input/>
+            </form>
+            
+            
+            
+            
+
+        </div>
+        <div class="page4Footer">
+            <div  class="calBox">
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+            </div>
+            <div  class="calBox">
+                <p>4</p>
+                <p>5</p>
+                <p>6</p>
+            </div>
+            <div class="calBox">
+                <p>7</p>
+                <p>8</p>
+                <p>9</p>
+            </div>
+            <div class="calBox">
+                <span class="material-symbols-outlined">
+                    backspace
+                    </span>
+                <p>0</p>
+                <span class="material-symbols-outlined">
+                    check_circle
+                    </span>
+            </div>
+        </div>
+      </div>
+      <div id="page_5"></div>
+      <div id="page_6"></div>
+    </div>
+  </body>
+</html>
+<script>
+  //   let count = 10;
+  //   let sum = new Promise(function (resolved, rejected) {
+  //     let id = setInterval(function () {
+  //       if (count == 0) {
+  //         resolved();
+  //         clearInterval(id);
+  //       } else {
+  //         console.log(count);
+  //         count--;
+  //       }
+  //     }, 1000);
+  //   });
+
+  //   sum
+  //     .then(function (resolved) {
+  //       execute();
+  //     })
+  //     .catch(function (rejected) {
+  //       console.log("error");
+  //     });
+
+  //   let text = document.querySelector(".samp");
+  //   function execute() {
+  //     text.innerText = "hello";
+  //   }
+
+
+  let midWindow=document.querySelector("#page_2")
+  let firstWindow=document.querySelector("#page_1")
+  let upiWindow=document.querySelector("#page_4")
+  let UAmmount;
+  let code=1999
+ 
+function prociedpayment(){
+    var step1Pay=new Promise(function(resolved,rejected){
+     UAmmount=document.querySelector(".SendAmmount").value
+ 
+
+    
+    let count=6;
+    midWindow.style.display="block"
+
+    let id=setInterval(function(){
+        if(count==0){
+            midWindow.style.display="none"
+            resolved()
+            clearInterval(id)
+        }
+        else{
+            midWindow.style.display="block"
+            count--
+
+        }
+    },1000)
+})
+
+  step1Pay
+  .then(function (resolved) {
+    firstWindow.style.display="none"
+    upiWindow.style.display="block"
+    document.querySelector(".userInputAmout").innerText=UAmmount
+      })
+      .catch(function (rejected) {
+        console.log("error");
+      });
+}
+
+
+</script>
