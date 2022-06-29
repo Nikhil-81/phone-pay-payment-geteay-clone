@@ -24,6 +24,7 @@
         margin: auto;
         height: 600px;
         border: 1px solid black;
+        border-collapse: collapse;
       }
       .pageOneNav {
         display: flex;
@@ -234,15 +235,78 @@ div.p5sec1>*{
     margin-top: 25px;
     text-align: center;
 }
-/* style="display:none" */
+
 #page_5{
   display: none;
 }
+
+
+.faildPaymentSection1 {
+    height: 250px;
+    text-align: center;
+    margin-top: 13%;
+}
+
+.error{
+  color: red;
+    font-size: 75px;
+}
+
+p.error_massage {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.faildPaymentsection2{
+  background-color: white;
+  /* padding-bottom: 65px; */
+  padding-top: 10px;
+
+}
+/* div.faildPaymentsection2>*{
+  padding-top: 20px;
+} */
+
+/* .faildPaymentsection2>h3,.faildPaymentsection2>p{
+  margin-top:10px;
+  padding: 12px 30px;
+} */
+table, td {
+  border-top: 1px solid;
+  
+}
+.border_view{
+  border-right: 1px solid;
+}
+
+.tab{
+  padding-top: 110px;
+}
+th{
+  font-size: 30px;
+}
+table{
+  margin: auto
+}
+.faildPaymentsection2>h3:first-child{
+  margin-top: 20px;
+  padding: 0px 14px;
+}
+.mainerror_massage{
+  margin-top: 20px;
+  padding: 0px 14px;
+}
+th {
+    padding: 0px 56px;
+  color: #9851d9;
+
+}
+
     </style>
   </head>
   <body>
     <div id="cont">
-      <div id="page_1" >
+      <div id="page_1">
         <div class="pageOneNav">
           <div class="pageOneSec1">
             <span class="material-symbols-outlined"> arrow_back </span>
@@ -372,47 +436,45 @@ div.p5sec1>*{
               <p>Pooja Shrevastave</p>
               <p>8766716975</p>
             </div>
-            <p class="SendAmmount">5000</p>
+            <p class="SendAmmount">1000</p>
           </div>
         </div>
-        <div class="p5sec4"><p style="color:#9851d9;align-items: center;font-size: 25px; font-weight: 600;">DONE</p></div>
+        <div class="p5sec4"><p style="color:#9851d9;align-items: center;font-size: 25px; font-weight: 600;" onclick="reloadPage()">DONE</p></div>
       </div>
-      <div id="page_6"></div>
+      <div id="page_6">
+        <div class="faildPaymentSection1">
+          <span class="material-symbols-outlined error">
+            error_circle_rounded
+            </span>
+            <p class=error_massage>
+              PAYMENT FAILD TO <br/> pooja Shrivastav
+            </p>
+        </div>
+        <div class="faildPaymentsection2">
+          <h3>PAYMENT FAILD</h3>
+          <p class="mainerror_massage">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto tempora provident beatae necessitatibus? Reprehenderit qui maxime nulla iusto. Nam ipsa id totam deserunt quas amet aspernatur explicabo quod recusandae harum!</p>
+          <div class="tab">
+            <table>
+              <tr>
+                <th class="border_view">VIEW DETAILS</th>
+                <th onclick="reloadPage()">DONE</th>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+      </div>
     </div>
   </body>
 </html>
 <script>
-  //   let count = 10;
-  //   let sum = new Promise(function (resolved, rejected) {
-  //     let id = setInterval(function () {
-  //       if (count == 0) {
-  //         resolved();
-  //         clearInterval(id);
-  //       } else {
-  //         console.log(count);
-  //         count--;
-  //       }
-  //     }, 1000);
-  //   });
-
-  //   sum
-  //     .then(function (resolved) {
-  //       execute();
-  //     })
-  //     .catch(function (rejected) {
-  //       console.log("error");
-  //     });
-
-  //   let text = document.querySelector(".samp");
-  //   function execute() {
-  //     text.innerText = "hello";
-  //   }
-
-
+  
   let midWindow=document.querySelector("#page_2")
   let firstWindow=document.querySelector("#page_1")
   let upiWindow=document.querySelector("#page_4")
   let succesPage=document.querySelector("#page_5")
+  let errorPage=document.querySelector("#page_6")
+
 
   let form=document.querySelector("form")
   let UAmmount;
@@ -488,12 +550,25 @@ midWindow.style.display="block"
 step2.
 then (function(resolved){
   upiWindow.style.display="none"
+  
   succesPage.style.display="block"
+  console.log(UAmmount)
+  reloadPage
+
 }).catch(function(rejected){
   console.log("error")
+  upiWindow.style.display="none"
+  errorPage.style.display="block"
+  reloadPage
+
+
+
 })
 
 }
+function reloadPage(){
+    document.location.reload()
+  }
 
 
 
